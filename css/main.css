@@ -1,0 +1,223 @@
+html {
+	color: #373833;
+	font-size: 1em;
+	line-height: 1.4;
+	background-color: #E8EAE3;
+}
+body {
+	background: transparent url('../img/bg-app.png') repeat-y top left / contain;
+	height: 100vh;
+}
+
+::-moz-selection {
+	background: #FA2742;
+	color: white;
+	text-shadow: none;
+}
+
+::selection {
+	background: #FA2742;
+	color: white;
+	text-shadow: none;
+}
+
+/* ============ LAYOUT
+================================== */
+
+h1, h2 {
+	display: inline-flex;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 500;
+	margin: 1.5em 0;
+	text-shadow: 1px 1px white;
+	position: relative;
+}
+h1 {
+	font-weight: 300;
+	text-align: center;
+	align-self: center;
+	margin: 1.5em 0 0 0;
+}
+h2:after {
+	position: absolute;
+	bottom: -2px;
+	left: -30px;
+	content: '';
+	width: calc(100% + 30px);
+	height: 1px;
+	background-color: #373833;
+	box-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.wrap-page {
+	display: flex;
+	flex-direction: column;
+}
+.form-switch {
+	margin: auto;
+}
+.actions {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	padding: 20px;
+	background-color: rgba(0,0,0,.1);
+	border-top: 1px solid rgba(255,255,255,1);
+	display: flex;
+	justify-content: space-between;
+}
+.actions .btn {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 700;
+	background-color: transparent;
+	color: #373833;
+	padding: 10px;
+	border: 4px double rgba(0,0,0,.5);
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+	text-shadow: 1px 1px 0 white;
+	transition: background-color .2s, color .2s;
+}
+.actions .btn:hover {
+	background-color: white;
+	color: #373833;
+}
+
+/* ============ SWITCH
+================================== */
+
+.switch {
+	width: 120px;
+	height: 33px;
+	position: relative;
+}
+
+.switch input {
+	position: absolute;
+	left: -999em;
+}
+
+.switch label {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #a5a39d;
+	border-radius: 20px;
+	box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2),
+	0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.switch label:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	border-radius: inherit;
+	background: #ccc; /* Fallback */
+	background: linear-gradient(#f2f2f2, #ababab);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+	0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.switch label:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: -18px;
+	right: -18px;
+	bottom: -18px;
+	left: -18px;
+	border-radius: inherit;
+}
+
+.switch label i {
+	display: block;
+	height: 100%;
+	width: 60%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	border-radius: inherit;
+	background: #b2ac9e; /* Fallback */
+	background: linear-gradient(#f7f2f6, #b2ac9e);
+	box-shadow: inset 0 1px 0 white,
+	0 0 8px rgba(0, 0, 0, 0.3),
+	0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch label i:after {
+	content: "";
+	position: absolute;
+	left: 15%;
+	top: 25%;
+	width: 70%;
+	height: 50%;
+	background: #d2cbc3; /* Fallback */
+	background: linear-gradient(#cbc7bc, #d2cbc3);
+	border-radius: inherit;
+}
+
+.switch label i:before {
+	content: "off";
+	position: absolute;
+	top: 50%;
+	right: -50%;
+	margin-top: -10px;
+	color: #666; /* Fallback */
+	color: rgba(0, 0, 0, 0.4);
+	font-style: normal;
+	font-weight: bold;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 #bcb8ae, 0 -1px 0 #97958e;
+}
+
+/* ============== intéraction
+==================================== */
+.switch input:checked ~ label { /* Background */
+	background: #FA2742;
+}
+
+.switch input:checked ~ label i { /* Toggle */
+	left: auto;
+	right: -1%;
+}
+
+.switch input:checked ~ label i:before { /* On/off */
+	content: "on";
+	right: 115%;
+	color: #731b26;
+	text-shadow: 0 1px 0 rgba(250,255,117,.5), 0 -1px 0 rgba(0,0,0,.7);
+}
+
+/* ============== responsive
+==================================== */
+@media screen and (min-width: 415px) {
+	body {
+		display: flex;
+		height: 100vh;
+		background: transparent url('../img/bg-app.png') no-repeat center center / cover;
+	}
+	.wrap-page {
+		margin: auto;
+		max-width: 414px;
+		border: double 4px rgba(0,0,0,0.5);
+		padding: 20px 20px 120px 20px;
+		position: relative;
+	}
+	.wrap-page h1 {
+		margin: 0;
+	}
+	.wrap-page .actions {
+		position: absolute;
+		width: calc(100% - 40px);
+	}
+}
