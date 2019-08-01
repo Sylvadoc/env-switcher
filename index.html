@@ -13,7 +13,8 @@
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 
-	<meta content="#E8EAE3" name="theme-color">
+    <meta content="#E8EAE3" name="theme-color">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -23,22 +24,22 @@
 	<form action="/" class="form-switch" type="post">
 		<h2>Intégration</h2>
 		<div class="switch">
-			<input id="env_integration" name="env_list" type="radio" value="integration">
+			<input class="env-switch" data-env="integration" id="env_integration" name="env_list" type="checkbox" value="integration">
 			<label for="env_integration"><i></i></label>
 		</div>
 		<h2>Recette</h2>
 		<div class="switch">
-			<input id="env_recette" name="env_list" type="radio" value="recette">
+			<input class="env-switch" data-env="recette" id="env_recette" name="env_list" type="checkbox" value="recette">
 			<label for="env_recette"><i></i></label>
 		</div>
 		<h2>Pré-production</h2>
 		<div class="switch">
-			<input id="env_preprod" name="env_list" type="radio" value="preprod">
+			<input class="env-switch" data-env="preprod" id="env_preprod" name="env_list" type="checkbox" value="preprod">
 			<label for="env_preprod"><i></i></label>
 		</div>
 		<h2>Production</h2>
 		<div class="switch">
-			<input checked="checked" id="env_prod" name="env_list" type="radio" value="prod">
+			<input class="env-switch" data-env="prod" checked="checked" id="env_prod" name="env_list" type="checkbox" value="prod">
 			<label for="env_prod"><i></i></label>
 		</div>
 	</form>

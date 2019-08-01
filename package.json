@@ -1,0 +1,25 @@
+{
+    "name": "env-switcher",
+    "version": "1.0.0",
+    "description": "switch hosts multi os",
+    "main": "main.js",
+    "scripts": {
+        "postinstall": "sudo chown root node_modules/electron/dist/chrome-sandbox && sudo chmod 4755 node_modules/electron/dist/chrome-sandbox",
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sylvadoc/env-switcher.git"
+    },
+    "author": "Sylvadoc Zacaria",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/Sylvadoc/env-switcher/issues"
+    },
+    "homepage": "https://github.com/Sylvadoc/env-switcher#readme",
+    "dependencies": {
+        "electron": "^6.0.0",
+        "sudo-prompt": "^9.0.0"
+    }
+}

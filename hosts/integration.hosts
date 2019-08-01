@@ -1,0 +1,11 @@
+######  <env-switcher> ######
+
+# [FI][INTEGRATION]
+10.159.161.171    immobilier.lefigaro.fr www.immobilier.lefigaro.fr changerdeville.explorimmo.com immobilier.droit-finances.commentcamarche.net immobilier.funradio.fr location-vente-immobilier.leparisien.fr immobilier.linternaute.com immobilier.rtl.fr iphoneflux.explorimmo.com
+10.159.161.163    header-figaroimmobilier.figarocms.com assets3.explorimmo.com assets3.explorimmoneuf.com assets3.immobilier.lefigaro.fr assets2.explorimmoneuf.com
+10.159.161.156    explorimmo.com www.explorimmo.com assets.explorimmo.com
+10.159.161.161    explorimmoneuf.com www.explorimmoneuf.com
+10.153.165.86     admin.explorimmo.com
+127.0.0.1         logp.xiti.com
+
+######  </env-switcher> ######
