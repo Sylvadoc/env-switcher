@@ -19,7 +19,7 @@
     },
     "homepage": "https://github.com/Sylvadoc/env-switcher#readme",
     "dependencies": {
-        "electron": "^6.0.0",
+        "electron": "^9.4.0",
         "sudo-prompt": "^9.0.0"
     }
 }
